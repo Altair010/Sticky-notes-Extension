@@ -1,0 +1,61 @@
+/* style.css - notes + highlights */
+
+/* Sticky note */
+.sticky-note {
+  position: absolute;
+  min-width: 180px;
+  min-height: 120px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  resize: both;
+  overflow: auto;
+  font-family: Arial, sans-serif;
+  z-index: 2147483647; /* topmost */
+}
+
+.sticky-note-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  cursor: move;
+  font-size: 13px;
+}
+
+.sticky-note textarea {
+  width: 100%;
+  height: calc(100% - 28px);
+  border: none;
+  background: transparent;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* Highlighted text */
+.saved-highlight {
+  padding: 0 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Popup list items (popup.css inlined inside popup.html, but keep styles here for content script) */
+.popup-highlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+.popup-highlight .hl-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}

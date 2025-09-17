@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Notes & Highlights</title>
+  <style>
+    body { font-family: Arial, sans-serif; width: 340px; padding: 10px; }
+    button { padding: 6px 8px; cursor: pointer; }
+    #highlightsList { margin-top: 8px; max-height: 260px; overflow-y: auto; }
+    .popup-highlight { display:flex; align-items:center; gap:8px; padding:6px; border:1px solid #eee; margin-bottom:6px; border-radius:4px; }
+    .hl-text { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .color-box { width:16px; height:16px; border-radius:3px; border:1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h3>Sticky Notes & Highlights</h3>
+
+  <div style="margin-bottom:8px;">
+    <button id="addNote">Add Note</button>
+    <button id="refreshBtn" style="margin-left:8px;">Refresh</button>
+  </div>
+
+  <div>
+    <strong>Highlights on this site</strong>
+    <div id="highlightsList">Loading...</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
